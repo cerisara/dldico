@@ -1,0 +1,7 @@
+site_name: Un dictionnaire du deep learning
+theme: readthedocs
+
+markdown_extensions:
+    - toc:
+        permalink: 
+
