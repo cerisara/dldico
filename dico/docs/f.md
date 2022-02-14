@@ -12,3 +12,7 @@ sont puissants, cross-device lorsque l'essentiel du calcul est déporté, horizo
 lorsque les données sont distribuées indépendamment entre les noeuds, vertical lorsque
 les noeuds collaborent sur des données en partie partagées, etc.
 
+voir par exemple le papier "A Secure and Efficient Federated Learning Framework for NLP"
+
+D'autres plateformes de Federated Learning sont listées [ici](http://www.cerisara.fr/fedDL.html).
+

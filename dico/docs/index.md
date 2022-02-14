@@ -2,6 +2,9 @@ En construction...
 
 ## Contenu
 
+- Langue des articles: français "augmenté" de termes anglais, car le domaine du deep learning contient
+de très nombreux termes techniques anglais (à commencer par son nom), qui perdent beaucoup de leur sens
+et de leur contexte d'utilisation lorsqu'ils sont traduits.
 - Articles en général très courts, qui donnent un point de vue sur un concept. Sachant le nom d'un concept, il est alors très facile aujourd'hui pour le lecteur de rechercher et de trouver rapidement tous les détails de ce concept. Il y a donc peu de liens externes dans ce dictionnaire.
 - Aucun nom de personnalité, entreprise ou université n'est donné dans ce dictionnaire, qui est focalisé
 entièrement sur des concepts scientifiques. Plusieurs raisons motivent ce choix, qui reviennent souvent
