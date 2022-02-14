@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>D - Un dictionnaire du deep learning</title>
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "D";
+    var mkdocs_page_input_path = "d.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> Un dictionnaire du deep learning</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="..">Home</a>
+	    </li>
+          
+            <li class="toctree-l1 current">
+		
+    <a class="current" href="./">D</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#deep-learning">Deep learning</a></li>
+    
+
+    <li class="toctree-l2"><a href="#differential-privacy">Differential privacy</a></li>
+    
+
+    <li class="toctree-l2"><a href="#distillation">Distillation</a></li>
+    
+
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../f/">F</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../g/">G</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../p/">P</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../t/">T</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../z/">Z</a>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">Un dictionnaire du deep learning</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>D</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h2 id="deep-learning">Deep learning<a class="headerlink" href="#deep-learning" title="Permanent link"></a></h2>
+<p>Réduire le deep learning à la seule application des réseaux de neurones
+inventés dans les années 80 à de grandes bases de données sur des GPU puissants,
+est équivalent à dire que les langages de programmation actuels (python, go, caml...)
+ne sont que l'application d'instructions en langage machine dans de grandes
+mémoires RAM, ou que "A la recherche du temps perdu" n'est qu'une suite de lettres sur
+de nombreuses pages.</p>
+<p>Voir aussi <a href="../p/#programmation-differentiable">Programmation différentiable</a></p>
+<h2 id="differential-privacy">Differential privacy<a class="headerlink" href="#differential-privacy" title="Permanent link"></a></h2>
+<p>Le principe de base est d'ajouter du bruit pendant l'apprentissage des modèles, ce qui
+permet de réduire théoriquement la probabilité que le modèle divulgue des données
+apprises par coeur, prévenant ainsi des attaques sur les modèles de deep learning comme
+la "membership inference attack".
+Mais le bruit réduit aussi la précision du modèle pour la tâche qu'il est censé réaliser,
+et cette réduction des performances se révèle souvent trop importante pour être utilisable
+en pratique.</p>
+<h2 id="distillation">Distillation<a class="headerlink" href="#distillation" title="Permanent link"></a></h2>
+<p>Les gros modèles (teacher) peuvent être "réduits" en transmettant les informations qu'ils ont apprises
+à d'autres modèles plus petits (students) mais dont les performances sont quasi-identiques.
+Début 2021, on parle aussi de distillation de données, c'est-à-dire de la possibilité de
+construire de toutes petites bases de données artificielles qui reproduisent les gradients des
+gros modèles. Cette approche permet d'entraîner ensuite un modèle sur très peu de données et
+très rapidement. A mon avis, cette piste est intéressante, mais d'autres papiers démontrent que
+pour bien généraliser, les modèles <em>doivent apprendre par coeur</em> la longue queue de la loi de Zipf,
+et je ne suis pas certain que la distillation de datasets le permette (?)</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../f/" class="btn btn-neutral float-right" title="F">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href=".." class="btn btn-neutral" title="Home"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href=".." style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../f/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+
+</body>
+</html>
