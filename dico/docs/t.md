@@ -36,3 +36,12 @@ Les transformers ont révolutionné le TAL, et sont à la base de
 tous les modèles récents du domaine: T0pp, GPT-J, BERT, GPT-1.2.3, RoBERTa,
 ALBERT, XL-NET, T5, BART...
 
+## Transformers
+
+Est le nom d'une des librairies python les plus utilisées en 2022 pour
+accéder et manipuler de très nombreux modèles d'embeddings.
+
+```
+pip install transformers
+```
+

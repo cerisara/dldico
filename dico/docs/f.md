@@ -13,6 +13,7 @@ lorsque les données sont distribuées indépendamment entre les noeuds, vertica
 les noeuds collaborent sur des données en partie partagées, etc.
 
 voir par exemple le papier "A Secure and Efficient Federated Learning Framework for NLP"
+et une [première étude pour réduire le coût environnemental du deep learning](https://openreview.net/forum?id=gdBGF7R8ZCJ).
 
 D'autres plateformes de Federated Learning sont listées [ici](http://www.cerisara.fr/fedDL.html).
 

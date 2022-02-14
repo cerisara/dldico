@@ -1,4 +1,4 @@
-site_name: Un dictionnaire du deep learning
+site_name: Shallow dictionnaire du deep learning
 theme: readthedocs
 
 markdown_extensions:
