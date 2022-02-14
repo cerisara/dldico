@@ -8,15 +8,15 @@
   
   
   <link rel="shortcut icon" href="../img/favicon.ico">
-  <title>D - Un dictionnaire du deep learning</title>
+  <title>E - Un dictionnaire du deep learning</title>
   <link rel="stylesheet" href="../css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
   <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
   
   <script>
     // Current page data
-    var mkdocs_page_name = "D";
-    var mkdocs_page_input_path = "d.md";
+    var mkdocs_page_name = "E";
+    var mkdocs_page_input_path = "e.md";
     var mkdocs_page_url = null;
   </script>
   
@@ -51,26 +51,20 @@
     <a class="" href="..">Home</a>
 	    </li>
           
+            <li class="toctree-l1">
+		
+    <a class="" href="../d/">D</a>
+	    </li>
+          
             <li class="toctree-l1 current">
 		
-    <a class="current" href="./">D</a>
+    <a class="current" href="./">E</a>
     <ul class="subnav">
             
-    <li class="toctree-l2"><a href="#deep-learning">Deep learning</a></li>
-    
-
-    <li class="toctree-l2"><a href="#differential-privacy">Differential privacy</a></li>
-    
-
-    <li class="toctree-l2"><a href="#distillation">Distillation</a></li>
+    <li class="toctree-l2"><a href="#embeddings">Embeddings</a></li>
     
 
     </ul>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../e/">E</a>
 	    </li>
           
             <li class="toctree-l1">
@@ -125,7 +119,7 @@
     
       
     
-    <li>D</li>
+    <li>E</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -135,31 +129,35 @@
           <div role="main">
             <div class="section">
               
-                <h2 id="deep-learning">Deep learning<a class="headerlink" href="#deep-learning" title="Permanent link"></a></h2>
-<p>Réduire le deep learning à la seule application des réseaux de neurones
-inventés dans les années 80 à de grandes bases de données sur des GPU puissants,
-est équivalent à dire que les langages de programmation actuels (python, go, caml...)
-ne sont que l'application d'instructions en langage machine dans de grandes
-mémoires RAM, ou que "A la recherche du temps perdu" n'est qu'une suite de lettres sur
-de nombreuses pages.</p>
-<p>Voir aussi <a href="../p/#programmation-differentiable">Programmation différentiable</a></p>
-<h2 id="differential-privacy">Differential privacy<a class="headerlink" href="#differential-privacy" title="Permanent link"></a></h2>
-<p>Le principe de base est d'ajouter du bruit pendant l'apprentissage des modèles, ce qui
-permet de réduire théoriquement la probabilité que le modèle divulgue des données
-apprises par coeur, prévenant ainsi des attaques sur les modèles de deep learning comme
-la "membership inference attack".
-Mais le bruit réduit aussi la précision du modèle pour la tâche qu'il est censé réaliser,
-et cette réduction des performances se révèle souvent trop importante pour être utilisable
-en pratique.</p>
-<h2 id="distillation">Distillation<a class="headerlink" href="#distillation" title="Permanent link"></a></h2>
-<p>Les gros modèles (teacher) peuvent être "réduits" en transmettant les informations qu'ils ont apprises
-à d'autres modèles plus petits (students) mais dont les performances sont quasi-identiques.
-Début 2021, on parle aussi de distillation de données, c'est-à-dire de la possibilité de
-construire de toutes petites bases de données artificielles qui reproduisent les gradients des
-gros modèles. Cette approche permet d'entraîner ensuite un modèle sur très peu de données et
-très rapidement. A mon avis, cette piste est intéressante, mais d'autres papiers démontrent que
-pour bien généraliser, les modèles <em>doivent apprendre par coeur</em> la longue queue de la loi de Zipf,
-et je ne suis pas certain que la distillation de datasets le permette (?)</p>
+                <h2 id="embeddings">Embeddings<a class="headerlink" href="#embeddings" title="Permanent link"></a></h2>
+<p>(<em>Fr: plongements</em>)</p>
+<p>Ce terme fait référence à une représentation vectorielle des observations.
+Il est souvent (mais pas seulement) utilisé en TAL pour représenter les mots,
+ou les phrases, ou les documents, avec un seul vecteur.
+Avant 2018, un mot du lexique était souvent représenté par un unique vecteur,
+toujours le même, par exemple calculé avec les modèles Word2Vec ou Glove.
+D'autres modèles existaient pour les phrases, comme Skip-thought.
+Depuis 2018, le vecteur d'un même mot change en fonction du reste de la phrase,
+on parle d'embeddings contextuels, ce qui permet de désambiguiser le sens du
+mot "avocat" par exemple.
+Les modèles qui calculent ces vecteurs sont par exemple BERT, T5, BART, GPT,
+G-Shard, Wu Dao 2.0...</p>
+<p>Ces modèles sont entraînés sur d'immenses bases de données extraites du Web et
+sont les plus gros modèles de deep learning aujourd'hui.
+Les vecteurs qu'ils produisent contiennent des informations sur tous les aspects
+linguistiques des mots (morphologie, syntaxe, sémantique, etc.), mais aussi sur
+des faits liés au mot (par exemple, tout ce que JFK a réalisé d'important dans sa vie).</p>
+<p>Les plus gros modèles sont en anglais; il en existe également dans d'autres langues,
+mais les solutions les plus performantes restent aujourd'hui de soit traduire d'abord
+en anglais pour pouvoir utiliser les meilleurs modèles, soit utiliser des modèles
+multi-lingues comme XLMR, qui fusionnent et partagent l'information entre de nombreuses 
+langues.</p>
+<p>Ces modèles gigantesques offrent les meilleures performances, mais soulèvent de nombreux
+problèmes éthiques (ils peuvent reproduire voire amplifier les biais des données,
+ils contiennent des informations privées, ils sont utilisés dans toutes les technologies
+en TAL mais seule une poignée d'acteurs mondiaux les contrôle...) et écologiques
+(le coût-carbone pour les entraîner est exhorbitant) qui focalisent l'attention des chercheurs depuis 2020.</p>
+<p>Voir aussi <a href="../l/#language-models">LLM</a>.</p>
               
             </div>
           </div>
@@ -167,10 +165,10 @@ et je ne suis pas certain que la distillation de datasets le permette (?)</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../e/" class="btn btn-neutral float-right" title="E">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../f/" class="btn btn-neutral float-right" title="F">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href=".." class="btn btn-neutral" title="Home"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../d/" class="btn btn-neutral" title="D"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -196,10 +194,10 @@ et je ne suis pas certain que la distillation de datasets le permette (?)</p>
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
-        <span><a href=".." style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../d/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../e/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../f/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>

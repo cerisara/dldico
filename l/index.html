@@ -8,15 +8,15 @@
   
   
   <link rel="shortcut icon" href="../img/favicon.ico">
-  <title>D - Un dictionnaire du deep learning</title>
+  <title>L - Un dictionnaire du deep learning</title>
   <link rel="stylesheet" href="../css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
   <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
   
   <script>
     // Current page data
-    var mkdocs_page_name = "D";
-    var mkdocs_page_input_path = "d.md";
+    var mkdocs_page_name = "L";
+    var mkdocs_page_input_path = "l.md";
     var mkdocs_page_url = null;
   </script>
   
@@ -51,21 +51,9 @@
     <a class="" href="..">Home</a>
 	    </li>
           
-            <li class="toctree-l1 current">
+            <li class="toctree-l1">
 		
-    <a class="current" href="./">D</a>
-    <ul class="subnav">
-            
-    <li class="toctree-l2"><a href="#deep-learning">Deep learning</a></li>
-    
-
-    <li class="toctree-l2"><a href="#differential-privacy">Differential privacy</a></li>
-    
-
-    <li class="toctree-l2"><a href="#distillation">Distillation</a></li>
-    
-
-    </ul>
+    <a class="" href="../d/">D</a>
 	    </li>
           
             <li class="toctree-l1">
@@ -83,9 +71,15 @@
     <a class="" href="../g/">G</a>
 	    </li>
           
-            <li class="toctree-l1">
+            <li class="toctree-l1 current">
 		
-    <a class="" href="../l/">L</a>
+    <a class="current" href="./">L</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#language-models">Language models</a></li>
+    
+
+    </ul>
 	    </li>
           
             <li class="toctree-l1">
@@ -125,7 +119,7 @@
     
       
     
-    <li>D</li>
+    <li>L</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -135,31 +129,17 @@
           <div role="main">
             <div class="section">
               
-                <h2 id="deep-learning">Deep learning<a class="headerlink" href="#deep-learning" title="Permanent link"></a></h2>
-<p>Réduire le deep learning à la seule application des réseaux de neurones
-inventés dans les années 80 à de grandes bases de données sur des GPU puissants,
-est équivalent à dire que les langages de programmation actuels (python, go, caml...)
-ne sont que l'application d'instructions en langage machine dans de grandes
-mémoires RAM, ou que "A la recherche du temps perdu" n'est qu'une suite de lettres sur
-de nombreuses pages.</p>
-<p>Voir aussi <a href="../p/#programmation-differentiable">Programmation différentiable</a></p>
-<h2 id="differential-privacy">Differential privacy<a class="headerlink" href="#differential-privacy" title="Permanent link"></a></h2>
-<p>Le principe de base est d'ajouter du bruit pendant l'apprentissage des modèles, ce qui
-permet de réduire théoriquement la probabilité que le modèle divulgue des données
-apprises par coeur, prévenant ainsi des attaques sur les modèles de deep learning comme
-la "membership inference attack".
-Mais le bruit réduit aussi la précision du modèle pour la tâche qu'il est censé réaliser,
-et cette réduction des performances se révèle souvent trop importante pour être utilisable
-en pratique.</p>
-<h2 id="distillation">Distillation<a class="headerlink" href="#distillation" title="Permanent link"></a></h2>
-<p>Les gros modèles (teacher) peuvent être "réduits" en transmettant les informations qu'ils ont apprises
-à d'autres modèles plus petits (students) mais dont les performances sont quasi-identiques.
-Début 2021, on parle aussi de distillation de données, c'est-à-dire de la possibilité de
-construire de toutes petites bases de données artificielles qui reproduisent les gradients des
-gros modèles. Cette approche permet d'entraîner ensuite un modèle sur très peu de données et
-très rapidement. A mon avis, cette piste est intéressante, mais d'autres papiers démontrent que
-pour bien généraliser, les modèles <em>doivent apprendre par coeur</em> la longue queue de la loi de Zipf,
-et je ne suis pas certain que la distillation de datasets le permette (?)</p>
+                <h2 id="language-models">Language models<a class="headerlink" href="#language-models" title="Permanent link"></a></h2>
+<p>Les modèles de langage prédisent le prochain mot (ou caractère, ou unité lexicale)
+à partir d'une suite de mots. Avant 2012, ils prenaient souvent la forme
+de n-grammes. Avant 2018, c'était souvent des modèles récurrents RNN ou LSTM.
+Après 2018, ce sont souvent des Transformers.
+Ils ont toujours été très importants en TAL, mais ils le sont encore plus aujourd'hui,
+car les Large Language Models (LLM) qui dominent la plupart des tâches de TAL aujourd'hui
+sont entraînés principalement avec cet objectif, ou un objectif similaire, comme les
+Masked Language Models (MLM).</p>
+<p>Les LLM les plus connus sont de la famille des modèles GPT.</p>
+<p>Voir par exemple le papier "Finetuned Language Models Are Zero-Shot Learners".</p>
               
             </div>
           </div>
@@ -167,10 +147,10 @@ et je ne suis pas certain que la distillation de datasets le permette (?)</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../e/" class="btn btn-neutral float-right" title="E">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../p/" class="btn btn-neutral float-right" title="P">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href=".." class="btn btn-neutral" title="Home"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../g/" class="btn btn-neutral" title="G"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -196,10 +176,10 @@ et je ne suis pas certain que la distillation de datasets le permette (?)</p>
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
-        <span><a href=".." style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../g/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../e/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../p/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>
