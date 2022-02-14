@@ -30,7 +30,8 @@ les nouveaux ennemis; l'overfitting, jusque là à éviter à tout prix, devient
 succès (voir la [double descente](../d/#double-descente)).
 Et surtout, comment expliquer les étonnantes capacités de généralisation ainsi obtenues ?
 Quelles propriétés géométriques possède vraiment l'espace en très grande dimension des paramètres ?
-Ce nouvel eldorado théorique est exploré actuellement par de nombreux chercheurs,
+Ce nouvel eldorado théorique est exploré actuellement par de nombreux chercheurs (cf. par ex. [KK](https://arxiv.org/pdf/1710.05468),
+[NT](https://arxiv.org/abs/1503.02406), [SM](https://arxiv.org/abs/1601.04920)...)
 mais reste bien mystérieux.
 
 Voir aussi [Programmation différentiable](../p/#programmation-differentiable)
