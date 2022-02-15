@@ -1,3 +1,12 @@
+## T5
+
+T5 est le précurseur de **T0pp**, qui sont tous deux des modèles
+seq2seq exploitant des transformeurs complets (encodeurs et décodeurs),
+tout comme BART, et à la différente des modèles de type BERT ou GPT.
+T0pp a été optimisé pour permettre le Zero-Shot Learning et le Prompt Programming.
+
+Voir aussi [GPT](../g/#gpt).
+
 ## Time series
 
 Les séries temporelles peuvent encore de nombreux défis aux modèles de deep learning
