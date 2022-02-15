@@ -19,7 +19,7 @@ et peut donc être utilisé sur un ordinateur personnel.
 GPT3 est beaucoup plus gros et n'est accessible que via une API payante.
 Des versions intermédiaires, comme Distill-GPT tentent de concilier
 performances et taille gérable.
-Le récent GPT-J est tous gratuitement et donnerait
+Le récent GPT-J est gratuit et donnerait
 des performances compétitives pour une taille encore gérable sur
 des systèmes personnels assez puissants.
 Notons que l'utilisation de tels modèles requiert de nombreuses

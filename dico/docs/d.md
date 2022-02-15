@@ -36,6 +36,11 @@ mais reste bien mystérieux.
 
 Voir aussi [Programmation différentiable](../p/#programmation-differentiable)
 
+## DeepSpeed
+
+Méthode d'optimisation de la mémoire pour permettre d'utiliser des
+modèles très gros, tout comme Zero-2. Voir [GPT](../d/#GPT).
+
 ## Differential privacy
 
 Le principe de base est d'ajouter du bruit pendant l'apprentissage des modèles, ce qui
