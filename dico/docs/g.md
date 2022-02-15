@@ -1,3 +1,9 @@
+## G-Shard
+
+Approche permettant d'entraîner de très gros embeddings contextuels.
+
+Voir aussi [GPT](#gpt).
+
 ## GAN
 
 Generative Adversarial Network: plutôt que générer des données
