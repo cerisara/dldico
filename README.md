@@ -1,2 +1,1 @@
-# dldico
-A deep learning dictionary
+Un dictionnaire peu profond sur le deep learning.

@@ -21,3 +21,11 @@ CC-BY
 - Depuis un code source: https://github.com/cerisara/dldico
 - Depuis un article: (une version preprint du dictionnaire sera bientôt publiée dans HAL)
 
+## Comment contribuer
+
+- Si vous aimez, vous pouvez ajouter une "étoile" dans [github](https://github.com/cerisara/dldico)
+- Si vous voulez commenter, vous pouvez ajouter une "issue" dans [github](https://github.com/cerisara/dldico)
+- Si vous voulez ajouter ou modifier un article, vous pouvez faire un "pull request" dans github
+
+Toute contribution est bienvenue, à partir du moment où elle s'inscrit dans la "ligne éditoriale" résumée ci-dessus. Toute contributrice ou tout contributeur est listé en tant que tel par github.
+
